@@ -1,9 +1,17 @@
 import { motion } from "framer-motion";
-
+import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { pc2d } from "../assets";
 
 const Hero = () => {
+  const [phoneScreen, setPhoneScreen] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setPhoneScreen(true);
+    }
+  }, []);
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -24,6 +32,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
+      {phoneScreen ? <img src={pc2d} alt="pcimage" className="pt-60 h-[500px]"/> : <ComputersCanvas />}
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
