@@ -23,8 +23,8 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-row bg-black-100  items-center justify-around py-5">
-      <div className="flex gap-10">
+    <div className="flex flex-row bg-black-100  items-center justify-around py-5 gap-5">
+      <div className="flex sm:gap-10 gap-5">
         <span className="text-red-800 cursor-pointer" onClick={openInsta}>
           <BsInstagram />
         </span>
@@ -39,7 +39,7 @@ const Footer = () => {
         </span>
       </div>
       <div className="flex ">
-        <p className="text-white   font-serif text-[15px]">
+        <p className="text-white   font-sans text-[12px]">
           Suter Inc@2023 All rights reserved
         </p>
       </div>
