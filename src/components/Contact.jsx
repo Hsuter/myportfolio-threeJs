@@ -1,16 +1,12 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import dotenv from "dotenv";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-
-//service_1fwyg0z
-//template_tvmgvyh
-//public key 5aRgtMqmB_IwOK49a
-//private key aYoA-B9ZSl8TBSEkMK6wv
 
 const Contact = () => {
   const formRef = useRef();
@@ -28,12 +24,16 @@ const Contact = () => {
   };
 
   const handleSubmit = (e) => {
+    const servive = import.meta.env.VITE_REACT_SERVICE_ID;
+    const template = import.meta.env.VITE_REACT_TEMPLATE_ID;
+    const profile = import.meta.env.VITE_REACT_PROFILE;
     e.preventDefault();
+
     setLoading(true);
     emailjs
       .send(
-        "service_1fwyg0z",
-        "template_tvmgvyh",
+        servive,
+        template,
         {
           from_name: form.name,
           to_name: "Suter",
@@ -41,7 +41,7 @@ const Contact = () => {
           to_email: "harry.suter.hs@gmail.com",
           message: form.message,
         },
-        "5aRgtMqmB_IwOK49a"
+        profile
       )
       .then(
         () => {

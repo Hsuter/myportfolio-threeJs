@@ -35,6 +35,7 @@ import tripguide from "./tripguide.png";
 import doba1 from "./doba1.jpg";
 import naxy1 from "./naxy1.jpg";
 import naxy2 from "./naxy2.jpg";
+import cv from "./cv.png";
 
 export {
   logo,
@@ -71,4 +72,5 @@ export {
   doba1,
   naxy1,
   naxy2,
+  cv,
 };

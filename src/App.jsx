@@ -12,6 +12,7 @@ import {
   Contact,
   Works,
   StarsCanvas,
+  Footer,
 } from "./components";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
