@@ -32,7 +32,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      {phoneScreen ? <img src={pc2d} alt="pcimage" className="pt-60 h-[500px]"/> : <ComputersCanvas />}
+      <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
