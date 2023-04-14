@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
-import { pc2d } from "../assets";
+import { hero1bg } from "../assets";
 
 const Hero = () => {
   const [phoneScreen, setPhoneScreen] = useState(false);
@@ -10,10 +10,12 @@ const Hero = () => {
   useEffect(() => {
     if (window.innerWidth < 768) {
       setPhoneScreen(true);
+    } else {
+      setPhoneScreen(false);
     }
   }, []);
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full h-screen mx-auto flex justify-center`}>
       <div
         className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
@@ -32,7 +34,11 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {phoneScreen ? (
+        <img src={hero1bg} alt="bg" className="mt-60 h-96" />
+      ) : (
+        <ComputersCanvas />
+      )}
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

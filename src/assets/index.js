@@ -38,6 +38,7 @@ import naxy2 from "./naxy2.jpg";
 import cv from "./cv.png";
 
 import pc2d from "./pc2d.png";
+import hero1bg from "./hero1bg.jpg";
 
 export {
   logo,
@@ -76,4 +77,5 @@ export {
   naxy2,
   cv,
   pc2d,
+  hero1bg
 };
