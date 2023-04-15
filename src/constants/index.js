@@ -204,6 +204,7 @@ const projects = [
     image: naxy2,
     source_code_link:
       "https://github.com/Hsuter/EcommerceSIte-reactJs-and-nodeJs-",
+    website_link: "https://naxybrands.vercel.app/",
   },
   {
     name: "Doba",
@@ -225,6 +226,7 @@ const projects = [
     ],
     image: doba1,
     source_code_link: "https://github.com/Hsuter/doba",
+    website_link: "https://doba.vercel.app/",
   },
   {
     name: "Naxy 1.0",
