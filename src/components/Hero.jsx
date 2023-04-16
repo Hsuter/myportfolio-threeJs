@@ -31,7 +31,7 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I'm a software developer and designer
             <br className="sm:block hidden" />
-            with a creative edge and zeal in etreprenuership.
+            with a creative edge and zeal in entrepreneurship.
           </p>
         </div>
       </div>
